@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.MainPage">
+
+    <StackLayout>
+        <Frame class="Header">
+            <Label class="Header" Text="Control de Equipos Informáticos"/>
+        </Frame>
+
+        
+        <StackLayout>
+            <Button x:Name="btConsultaGeneral" Text="Consulta de todos los equipos" Clicked="btConsultaGeneral_Clicked"/>
+            <Button x:Name="btConsultaAula" Text="Consulta de los equipos en un aula" Clicked="btConsultaAula_Clicked"/>
+            <Button x:Name="btModificarEquipo" Text="Modificar las caracteristicas de un equipo" Clicked="btModificarEquipo_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

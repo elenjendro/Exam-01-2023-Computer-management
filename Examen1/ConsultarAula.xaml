@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Examen1.ConsultarAula">
+    <ContentPage.Content>
+          <ScrollView>
+            <StackLayout>
+                <Frame class="Header">
+                    <Label class="Header" Text="Consulta de los equipos en un aula"/>
+                </Frame>
+
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Listar equipos por aula: "/>
+                        <Picker x:Name="pkAula" SelectedIndexChanged="pkAula_SelectedIndexChanged">
+                            <Picker.Items>
+                                <x:String>S41</x:String>
+                                <x:String>S40</x:String>
+                                <x:String>Barroca</x:String>
+                            </Picker.Items>
+                            </Picker>
+                    </StackLayout>
+                    
+                </Frame>
+
+                <Frame>
+                    <ListView x:Name="lvLEquipos" ItemSelected="lvLEquipos_ItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
+                                    
+                                        <Label Text="Id: "/>
+                                        <Label Text="{Binding id}"/>
+                                    
+                                   
+                                        <Label Text="Nombre: "/>    
+                                        <Label Text="{Binding nom}"/>
+                                   
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame" Class="Header">
+                <Setter Property="BackgroundColor" Value="CornflowerBlue"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+            <Style TargetType="Label" Class="Header">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="BorderColor" Value="CornflowerBlue"/>
+                <Setter Property="Margin" Value="10,5,10,5"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="CornflowerBlue"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="10,5,10,5"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

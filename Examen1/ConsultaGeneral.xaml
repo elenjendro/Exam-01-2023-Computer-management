@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Examen1.ConsultaGeneral">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <Frame class="Header">
+                    <Label class="Header" Text="Consulta de todos los equipos"/>
+                </Frame>
+
+                <Frame>
+                    <ListView x:Name="lvLEquipos" ItemSelected="lvLEquipos_ItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
+                                    
+                                        <Label Text="Id: "/>
+                                        <Label Text="{Binding id}"/>
+                                    
+                                   
+                                        <Label Text="Nombre: "/>    
+                                        <Label Text="{Binding nom}"/>
+                                   
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

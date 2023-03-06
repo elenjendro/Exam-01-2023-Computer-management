@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Examen1.MostrarEquipo">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame class="Header">
+                    <Label class="Header" Text="Datos Equipo"/>
+                </Frame>
+
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="lbId" Text="Id: "/>
+                        <Label x:Name="lbNom" Text="Nombre: "/>
+                        <Label x:Name="lbTipo" Text="Tipo: "/>
+                        <Label x:Name="lbFecha" Text="Fecha: "/>
+                        <Label x:Name="lbPersona" Text="Persona: "/>
+                        <Label x:Name="lbAula" Text="Aula: "/>
+                    </StackLayout>
+                </Frame>
+               
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

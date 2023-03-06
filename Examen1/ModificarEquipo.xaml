@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Examen1.ModificarEquipo">
+    <ContentPage.Content>
+         <ScrollView>
+            <StackLayout>
+                <Frame class="Header">
+                    <Label class="Header" Text="Modificar las caracteristicas de un equipo"/>
+                </Frame>
+
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Buscar un equipo: "/>
+                        <Entry x:Name="entId" Placeholder="Inserte un Id"/>
+                        <StackLayout Orientation="Horizontal">
+                             <Button x:Name="btBuscar" Text="Buscar" Clicked="btBuscar_Clicked"/>
+                            <Button x:Name="btLimpiar" Text="Limpiar" Clicked="btLimpiar_Clicked"/>
+                        </StackLayout>
+                       
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="secMod" IsVisible="false">
+                   <StackLayout>
+                       <StackLayout Orientation="Horizontal">
+                           <Label x:Name="lbPersona" Text="Persona: "/>
+                           <Switch x:Name="swPersona" Toggled="swPersona_Toggled"/>
+                       </StackLayout>
+
+                        <Picker x:Name="pkAula">
+                            <Picker.Items>
+                                <x:String>S41</x:String>
+                                <x:String>S40</x:String>
+                                <x:String>Barroca</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                        <Button x:Name="btModificar" Text="Modificar" Clicked="btModificar_Clicked"/>
+                    
+                   </StackLayout>
+                </Frame>
+
+                 <Frame x:Name="secList" IsVisible="true">
+                    <StackLayout>
+                        <Label Text="Seleccionar un equipo: "/>
+                        <ListView x:Name="lvLEquipos" ItemSelected="lvLEquipos_ItemSelected" HasUnevenRows="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
+                                    
+                                                <Label Text="Id: "/>
+                                                <Label Text="{Binding id}"/>
+                                    
+                                   
+                                                <Label Text="Nombre: "/>    
+                                                <Label Text="{Binding nom}"/>
+                                   
+                                    
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
